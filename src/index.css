@@ -1,13 +1,177 @@
+/* SearchForm */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Spartan:wght@300;400;500&display=swap");
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Montserrat', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 'Spartan', sans-serif;
 }
+
+:root {
+  --PrimaryColor: hsl(225, 50%, 48%);
+  --SecondaryColor: hsl(180, 17%, 95%);
+  --colorOne: hsl(15, 74%, 70%);
+  --colorTwo: hsl(28, 100%, 82%);
+  --HoverColor: hsl(225, 56%, 59%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 12%);
+  --textColor: hsl(240, 1%, 48%);
+  --borderColor: hsl(0, 0%, 83%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyText: rgb(145, 145, 145);
+  --inputColor: hsl(330, 12%, 97%);
+  --boxShadow: box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.85) 0px 4px 6px -2px;
+  --transition: .4s ease-in-out;
+}
+
+body {
+  background: var(--whiteColor);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.section {
+  padding: 4rem 0 2rem;
+}
+
+
+.navbar{
+  position: fixed;
+  flex-direction: column;
+  width: 100%;
+  z-index: 1000;
+}
+
+@media only screen and (max-width: 400px) {
+
+  /* styles for search form on small screens */
+  .search-form {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .search-input {
+    width: 70%;
+  }
+
+  .search-button {
+    width: 30%;
+  }
+}
+@media only screen and (max-width: 600px) {
+
+  /* styles for search form on small screens */
+  .search-form {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .search-input {
+    width: 70%;
+  }
+
+  .search-button {
+    width: 30%;
+  }
+}
+@media only screen and (max-width: 800px) {
+
+  /* styles for search form on small screens */
+  .search-form {
+    width: 80%;
+    padding: 12px;
+  }
+
+  .search-input {
+    width: 60%;
+  }
+
+  .search-button {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+
+  /* styles for search form on medium screens */
+  .search-form {
+    width: 80%;
+    padding: 15px;
+  }
+
+  .search-input {
+    width: 60%;
+  }
+
+  .search-button {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+
+  /* styles for search form on large screens */
+  .search-form {
+    width: 80%;
+    padding: 20px;
+  }
+
+  .search-input {
+    width: 50%;
+  }
+
+  .search-button {
+    width: 50%;
+  }
+}
+
+
+/* FAQ section */
+.wrapper{
+ color: #85662b;
+}
+
+.accordian{
+  width: 500px;
+}
+
+.item{
+  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+  margin-bottom: 5px;
+  padding: 10px 5px;
+}
+
+.title{
+  color: #85662b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+ 
+.content{
+  color: #8b7f75;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.content.show{
+  height: auto;
+  max-height: 9999px;
+  transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+}
+
